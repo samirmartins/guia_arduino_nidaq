@@ -1,0 +1,44 @@
+site_name: Guia de uso Arduino/NIDAQ - GCoM
+site_description: Aqui vai entrar a descrição
+site_author: Samir Angelo Milani Martins e Wendell Christian Calixto Pinto
+
+repo_name: samirmartins/guia_arduino_nidaq
+repo_url: https://github.com/samirmartins/guia_arduino_nidaq
+
+copyright: Copyright &copy; 2025 - Samir Martins/Wendell Pinto
+
+nav:
+  - Início: index.md
+  - Arduino: arduino.md
+  - NIDAQ: nidaq.md
+  
+theme:
+  favicon: img/favicon.ico
+  name: material
+  logo: img/logo.png
+  features:
+    - content.code.copy
+  language: pt-br
+  palette:
+    - scheme: default
+      primary: white
+      accent: brown
+      toggle:
+        icon: material/brightness-7
+        name: Mudar para modo noturno
+    - scheme: slate
+      primary: black
+      accent: brown
+      toggle:
+        icon: material/brightness-4
+        name: Mudar para modo claro 
+
+plugins:
+  - search
+  - meta-descriptions:
+      export_csv: false
+      quiet: false
+      enable_checks: false
+      min_length: 50
+      max_length: 160
+      trim: false
