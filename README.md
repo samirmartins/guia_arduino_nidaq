@@ -1,2 +1,4 @@
-# guia_arduino_nidaq
-Guia de Uso Introdutório para Arduino e Placas da National Instruments utilizando Python
+# Guia de Uso básico Arduino/NIDAQmx
+
+Este repositório apresenta um guia de uso básico para manejo de placas Arduino (utilizando C++) e 
+NIDAQmx (utilizando Python)
