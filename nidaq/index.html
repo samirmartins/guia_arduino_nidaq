@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#guia-de-uso-placas-nidaqmx-python" class="md-skip">
+        <a href="#guia-de-uso-placas-nidaq-python" class="md-skip">
           Pular para conteúdo
         </a>
       
@@ -357,9 +357,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#task" class="md-nav__link">
+  <a href="#tarefas-task" class="md-nav__link">
     <span class="md-ellipsis">
-      Task
+      Tarefas (Task)
     </span>
   </a>
   
@@ -484,9 +484,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#task" class="md-nav__link">
+  <a href="#tarefas-task" class="md-nav__link">
     <span class="md-ellipsis">
-      Task
+      Tarefas (Task)
     </span>
   </a>
   
@@ -586,7 +586,7 @@
   
 
 
-<h1 id="guia-de-uso-placas-nidaqmx-python">Guia de Uso - Placas NIDAQmx + Python</h1>
+<h1 id="guia-de-uso-placas-nidaq-python">Guia de Uso - Placas NIDAQ + Python</h1>
 <h2 id="o-que-e-este-guia">O que é este guia?</h2>
 <p>Este guia foi escrito para novos membros do GCOM (<a href="https://www.ufsj.edu.br/gcom">Grupo de Controle e Modelagem</a>). O objetivo
 desta seção é desmistificar a utilização de placas de aquisição de dados da National Instruments (NIDAQ - National 
@@ -607,7 +607,17 @@ registro gratuito em www.ni.com. Alternativamente, o usuário pode instalar driv
 <pre><code class="language-python">python -m nidaqmx installdriver
 </code></pre>
 <p>Recomendamos a primeira opção como o padrão.</p>
-<h2 id="task">Task</h2>
+<p><strong>IMPORTANTE:</strong> esta é uma versão muito resumida para uso rápido. Maiores detalhes podem ser encontrados (em inglês) em 
+<a href="https://pypi.org/project/nidaqmx/">https://pypi.org/project/nidaqmx/</a></p>
+<h2 id="tarefas-task">Tarefas (Task)</h2>
+<p>Uma tarefa é um conjunto de canais virtuais com temporização e outras propriedades. Resumidamente, 
+são necessárias tarefas para aquisição e envio de dados. <a href="https://www.ni.com/docs/en-US/bundle/ni-daqmx/page/tasksnidaqmx.html">Maiores informações aqui.</a></p>
+<p>Para criar uma tarefa, use o seguinte comando: </p>
+<pre><code class="language-python">import nidaqmx # Importa a biblioteca 
+
+with nidaqmx.Task() as task: # Cria a tarefa 
+    pass # Aqui você deve digitar o código que deverá ser executado naquela tarefa.
+</code></pre>
 <h2 id="canais-virtuais">Canais Virtuais</h2>
 <h2 id="timing">Timing</h2>
 <h2 id="aquisicao-de-dados-analog-input">Aquisição de dados - Analog Input</h2>
