@@ -588,7 +588,22 @@
 
 <h1 id="guia-de-uso-placas-nidaqmx-python">Guia de Uso - Placas NIDAQmx + Python</h1>
 <h2 id="o-que-e-este-guia">O que é este guia?</h2>
-<p><strong>IMPORTANTE:</strong> pip install nidaqmx e instalar driver nidaqmx direto do site da national</p>
+<p>Este guia foi escrito para novos membros do GCOM (<a href="https://www.ufsj.edu.br/gcom">Grupo de Controle e Modelagem</a>). O objetivo
+desta seção é desmistificar a utilização de placas de aquisição de dados da National Instruments (NIDAQ - National 
+Instruments Data Acquisition USB Devices) utilizando Python como linguagem de programação.</p>
+<ul>
+<li><strong>OBSERVAÇÃO 1:</strong> para utilizar este guia, o usuário deverá estar familiarizado com a linguagem Python,
+bem como instalação de bibliotecas. </li>
+<li><strong>OBSERVAÇÃO 2:</strong> a biblioteca nidaqmx será usada como base neste guia. Para instalá-la, use o comando: </li>
+</ul>
+<pre><code class="language-python">pip install nidaqmx
+</code></pre>
+<ul>
+<li><strong>OBSERVAÇÃO 3:</strong> o driver USB da placa de aquisição de dados precisa estar instalado. No momento da escrita deste 
+guia, o download podia ser realizado <a href="https://www.ni.com/en/support/downloads/drivers/download.ni-daq-mx.html?srsltid=AfmBOoqR5dNImzE-uENtu_rWsn18H7xPUaxoC6IlAsGM96JzoROllMhs#565026">por este link</a>, após um 
+registro gratuito em www.ni.com.</li>
+</ul>
+<p>pip install nidaqmx e instalar driver nidaqmx direto do site da national</p>
 <h2 id="task">Task</h2>
 <h2 id="canais-virtuais">Canais Virtuais</h2>
 <h2 id="timing">Timing</h2>
