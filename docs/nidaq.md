@@ -1,4 +1,4 @@
-# Guia de Uso - Placas NIDAQmx + Python
+# Guia de Uso - Placas NIDAQ + Python
 
 ## O que é este guia?
 
@@ -26,9 +26,25 @@ python -m nidaqmx installdriver
 
 Recomendamos a primeira opção como o padrão.
 
-## Task
+**IMPORTANTE:** esta é uma versão muito resumida para uso rápido. Maiores detalhes podem ser encontrados (em inglês) em 
+[https://pypi.org/project/nidaqmx/](https://pypi.org/project/nidaqmx/)
+
+## Tarefas (Task)
+
+Uma tarefa é um conjunto de canais virtuais com temporização e outras propriedades. Resumidamente, 
+são necessárias tarefas para aquisição e envio de dados. [Maiores informações aqui.](https://www.ni.com/docs/en-US/bundle/ni-daqmx/page/tasksnidaqmx.html)
+
+Para criar uma tarefa, use o seguinte comando: 
+
+````python
+import nidaqmx # Importa a biblioteca 
+
+with nidaqmx.Task() as task: # Cria a tarefa 
+    pass # Aqui você deve digitar o código que deverá ser executado naquela tarefa.
+````
 
 ## Canais Virtuais
+
 
 ## Timing
 
