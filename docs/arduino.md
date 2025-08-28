@@ -11,7 +11,7 @@ Para o download do software basta acessar https://www.arduino.cc/en/software/
 Existem diversos tipos de placas Arduino no mercado, e cada uma 
 apresenta diferenças em suas portas de entrada e saída, aqui temos alguns
 comandos básicos genéricos a quaisquer arduinos e que quase sempre são utilizados 
-````python
+```c
     pinMode(pin, MODE): Define o modo de funcionamento de um pino como entrada (INPUT) ou saída (OUTPUT).
     digitalRead(pin): Lê o estado de um pino digital (HIGH ou LOW). 
     digitalWrite(pin, STATE): Escreve um valor digital (HIGH ou LOW) num pino digital. 
@@ -21,7 +21,7 @@ comandos básicos genéricos a quaisquer arduinos e que quase sempre são utiliz
     Serial.begin(baudrate): Inicializa a comunicação serial com uma taxa de bits por segundo especificada. 
     Serial.print(data): Imprime dados através da comunicação serial. 
     Serial.println(data): Imprime dados e adiciona uma nova linha no final através da comunicação serial. 
-````
+```
     
     
 Para definir quais entradas tem o arduino que você está trabalhando abra o 
