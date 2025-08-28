@@ -59,6 +59,7 @@ range e lendo um dado:
 
 ```python
 import nidaqmx
+
 with nidaqmx.Task() as task:
     task.ai_channels.add_ai_voltage_chan("Dev1/ai0", min_val=-10.0, max_val=10.0)
     task.read()
@@ -70,6 +71,7 @@ Para adicionar múltiplos canais a uma tarefa e configurá-los:
 
 ```python
 import nidaqmx
+
 with nidaqmx.Task() as task:
     task.ai_channels.add_ai_voltage_chan("Dev1/ai0", min_val=-5.0, max_val=5.0)
     task.ai_channels.add_ai_voltage_chan("Dev1/ai1", min_val=-10.0, max_val=10.0)
@@ -90,7 +92,6 @@ por software (pelo computador).
 Para adquirir sinais utilizando temporização por harware:
 
 ```python
-
 import nidaqmx
 from nidaqmx.constants import AcquisitionType, READ_ALL_AVAILABLE
 
@@ -106,6 +107,59 @@ Acquired data: [-0.149693, 2.869503, 4.520249, 4.704886, 2.875912, -0.006104, -2
 
 ### DIFF, RSE e NRSE
 
+Há uma diferença entre métodos de coleta de dados. Usando a configuração terminal 
+
+- **DIFF (Differential)**: os terminais físicos vão medir a diferença de potencial
+entre dois terminais físicos (AI+ e AI-). Esta é preferível quando se tem ruído de modo comum. 
+Evita, ainda, loops de terra 
+- **RSE (Referenced Single-Ended)**: nesta configuração usa-se o terra do chassi do dispositivo DAQ
+como referência. Utiliza apenas uma entrada física por canal (ao contrário do DIFF, que usa duas).
+Entretanto, apresenta maior susceptibilidade a ruído de modo comum e loops de terra.
+- **NRSE (Non-Referenced Single-Ended)**: usa uma referência de terra compartilhado por todos os canais. Não possui, 
+necessariamente, o terra do chassi do dispositivo. Permite uma conexão específica para o terra para todos os canais.
+
+Exemplo: 
+
+```python
+import nidaqmx
+from nidaqmx.constants import AcquisitionType, READ_ALL_AVAILABLE, TerminalConfiguration
+
+with nidaqmx.Task() as task:
+
+	# ATENÇÃO: DESCOMENTE UMA DAS LINHAS ABAIXO, CONFORME CONFIGURAÇÃO TERMINAL DESEJADA
+    #task.ai_channels.add_ai_voltage_chan("Dev1/ai0", terminal_config=TerminalConfiguration.DIFF)
+    #task.ai_channels.add_ai_voltage_chan("Dev1/ai1", terminal_config=TerminalConfiguration.RSE)
+	#task.ai_channels.add_ai_voltage_chan("Dev1/ai2", terminal_config=TerminalConfiguration.NRSE)
+    
+    task.timing.cfg_samp_clk_timing(1000.0, sample_mode=AcquisitionType.FINITE, samps_per_chan=10)
+    data = task.read(READ_ALL_AVAILABLE)
+    print("Acquired data: [" + ", ".join(f"{value:f}" for value in data) + "]")
+
+AIChannel(name=Dev1/ai0)
+Acquired data: [-0.149693, 2.869503, 4.520249, 4.704886, 2.875912, -0.006104, -2.895596, -4.493698, -4.515671, -2.776574]
+```
+
 ## Envio de dados - Analog Output
 
-### Analog Output - Exemplo 
+Podemos usar canais de saída para gerar sinais de tensão pela placa de aquisição de 
+dados da National. Abaixo um exemplo de como utilizar o canal analógico ao0 (analog output 0)
+para enviar um sinal de tensão utilizando uma tarefa com o método **write**:
+
+```python
+import nidaqmx
+from nidaqmx.constants import AcquisitionType
+
+with nidaqmx.Task() as task:
+    data = []
+    total_samples = 1000
+    task.ao_channels.add_ao_voltage_chan("Dev1/ao0")
+    task.timing.cfg_samp_clk_timing(
+        1000.0, sample_mode=AcquisitionType.FINITE, samps_per_chan=total_samples
+    )
+
+    data = [5.0 * i / total_samples for i in range(total_samples)]
+    number_of_samples_written = task.write(data, auto_start=True)
+    print(f"Generating {number_of_samples_written} voltage samples.")
+    task.wait_until_done()
+    task.stop()
+```
