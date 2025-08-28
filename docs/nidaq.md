@@ -147,8 +147,19 @@ para enviar um sinal de tensão utilizando uma tarefa com o método **write**:
 
 ```python
 import nidaqmx
+from nidaqmx.constants import AcquisitionType
 
 with nidaqmx.Task() as task:
+    data = []
+    total_samples = 1000
     task.ao_channels.add_ao_voltage_chan("Dev1/ao0")
-    task.write([1.1, 2.2, 3.3, 4.4, 5.5], auto_start=True)
+    task.timing.cfg_samp_clk_timing(
+        1000.0, sample_mode=AcquisitionType.FINITE, samps_per_chan=total_samples
+    )
+
+    data = [5.0 * i / total_samples for i in range(total_samples)]
+    number_of_samples_written = task.write(data, auto_start=True)
+    print(f"Generating {number_of_samples_written} voltage samples.")
+    task.wait_until_done()
+    task.stop()
 ```
