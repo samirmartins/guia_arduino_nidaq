@@ -9,28 +9,42 @@ compilar códigos em linguagem C/C++, e também enviarmos esse código para a
 placa, onde ela funcionará de forma independente, desconectada do computador.
 Para o download do software basta acessar <https://www.arduino.cc/en/software/>
 ##Configurações
-Após instalar com sucesso o software será necessário conectar o microcontrolador ao computador você
+Após instalar com sucesso o ‘software’ será necessário conectar o microcontrolador ao computador, você
 precisará selecionar qual o modelo de arduino está sendo utilizado (ex: Arduino UNO, Arduino NANO), para isto
-basta ir dentro do aplicativo no menu ferramentas e selecionar a opção placa, dentro dela estará listado o
+basta ir dentro do aplicativo no menu ferramentas(tools) e selecionar a opção placa, dentro dela estará listado o
 modelo de seu equipamento.
-"ADICIONAR IMAGEM EXEMPLO"
-Depois disso será necessário indicar à IDE qual porta está sendo utilizada pela sua placa, par isso basta 
-ir novamente ao menu ferramentas porém dessa vez selecione a opção porta. 
+
+
+![Seleção do modelo](./img/ArduinoMarkdown1.jpeg)
+
+
+Depois disso será necessário indicar a IDE qual porta está sendo utilizada pela sua placa, par isso basta 
+ir novamente ao menu ferramentas, porém dessa vez selecione a opção porta. 
 Você verá uma lista de portas disponíveis. Geralmente, a porta correta será identificada com o nome da
 placa ao lado (ex: "COM3 (Arduino Uno)"). Se houver dúvidas, desconecte a placa, verifique quais portas 
 sumiram da lista e conecte-a novamente para confirmar.
-"ADICIONAR IMAGEM EXEMPLO"
-Embora a instalação do Arduino IDE em sistemas operacionais modernos geralmente inclua os drivers 
+
+![Seleção do modelo](./img/ArduinoMarkdown2.jpg)
+
+
+Embora a instalação do Arduino IDE em sistemas operacionais modernos inclua geralmente os drivers 
 necessários para placas originais, placas "clones" ou similares podem exigir a instalação manual de um
 driver específico, para que a porta de comunicação seja reconhecida. Para isso
 verifique o chip próximo à porta USB da sua placa. Procure por nomes como "CH340G" ou "FT232RL". 
 Em seguida, baixe e instale o driver correspondente para o seu sistema operacional.
-"ADICIONAR IMAGEM EXEMPLO"
+
+![Seleção do modelo](./img/ArduinoMarkdown3.jpeg)
+
+![Seleção do modelo](./img/ArduinoMarkdown4.jpg)
+
+
 Para o desenvolvimento de quaisquer códigos dentro do arduino bibliotecas serão de suma importância, 
 para importá-las e conseguir trabalhar de maneira mais fácil é necessário, ir ao menu Sketch > Incluir 
 biblioteca > Gerenciar bibliotecas, então utilizar a barra de busca pela biblioteca desejada, selecione-a e
-clique em instlar.
-"ADICIONAR IMAGEM EXEMPLO"
+clique em instalar.
+
+![Seleção do modelo](./img/ArduinoMarkdown5.jpg)
+
 #Desenvolvimento do projeto 
 Existem diversos tipos de placas Arduino no mercado, e cada uma 
 apresenta diferenças em suas portas de entrada e saída, aqui temos alguns
