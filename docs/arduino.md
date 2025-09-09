@@ -1,57 +1,57 @@
-#O que é esse guia?
+## O que é esse guia?
 
-Manual rápido para trabalho com placas Arduino, além de instalação e configurações do Arduino IDE, 
-e plataformas de simulação como TinkerCAD.
+Um manual rápido para trabalho com placas Arduino, além de instalação e configurações do Arduino IDE.
 
-#Arduino IDE
+## Instalação do Arduino IDE 
 
-**Instalação**
-
-Arduino IDE é um software onde é possível desenvolver e 
-compilar códigos em linguagem C/C++, e também enviarmos esse código para a
-placa, onde ela funcionará de forma independente, desconectada do computador.
-Para o download do software basta acessar <https://www.arduino.cc/en/software/>
-
-##Configurações
-
-Após instalar com sucesso o ‘software’ será necessário conectar o microcontrolador ao computador, você
-precisará selecionar qual o modelo de arduino está sendo utilizado (ex: Arduino UNO, Arduino NANO)
+Arduino IDE (Ambiente de Desenvolvimento Integrado - IDE) é um software onde é possível desenvolver e 
+compilar códigos em C/C++, e também enviar esse código para o microcontrolador,
+onde o mesmo funcionará de forma independente, mesmo se desconectado do computador.
+Para o download da IDE que permite a programação de placas Arduino acesse [aqui.](<https://www.arduino.cc/en/software/>) 
+A instalação segue os moldes padrões de qualquer instalador convencional.
 
 
-![Seleção do modelo](./img/ArduinoMarkdown1.jpeg)
+## Configurações
+
+Após instalar com sucesso a IDE, será necessário conectar o microcontrolador ao computador por meio de uma porta USB. Você
+precisará selecionar qual o modelo de arduino está sendo utilizado (ex: Arduino UNO, Arduino NANO), 
+conforme apresentado na imagem que segue.
 
 
-Depois disso será necessário indicar a IDE qual porta está sendo utilizada pela sua placa, par isso basta 
-ir novamente ao menu ferramentas, porém dessa vez selecione a opção porta. 
-Você verá uma lista de portas disponíveis. Geralmente, a porta correta será identificada com o nome da
-placa ao lado (ex: "COM3 (Arduino Uno)"). Se houver dúvidas, desconecte a placa, verifique quais portas 
-sumiram da lista e conecte-a novamente para confirmar.
+![Seleção do modelo de Arduino](./img/ArduinoSelecao.jpeg)
 
-![Seleção do modelo](./img/ArduinoMarkdown2.jpg)
+Em seguida, será necessário indicar à IDE qual porta está sendo utilizada pelo seu Arduino. Para isto basta 
+ir novamente ao menu ferramentas, mas dessa vez selecionando a opção "Port". Você verá uma lista de portas disponíveis. Geralmente, a porta correta será identificada com o nome da
+placa ao lado (ex: "COM3 (Arduino Uno)"). 
 
+Se houver dúvidas, desconecte a placa, verifique quais portas 
+sumiram da lista e conecte-a novamente para confirmar. Alternativamente, consulte a porta que está 
+sendo utilizada pelo seu Arduino no Gerenciador de Tarefas do Windows.
 
-Embora a instalação do Arduino IDE em sistemas operacionais modernos inclua geralmente os drivers 
+![Seleção de porta serial](./img/ArduinoSerial.jpg)
+
+## Instalação de Drivers
+
+Embora a instalação do Arduino IDE em sistemas operacionais modernos inclua os drivers 
 necessários para placas originais, placas "clones" ou similares podem exigir a instalação manual de um
-driver específico, para que a porta de comunicação seja reconhecida. Para isso
-verifique o chip próximo à porta USB da sua placa. Procure por nomes como "CH340G" ou "FT232RL". 
-Em seguida, baixe e instale o driver correspondente para o seu sistema operacional.
+driver específico, para que a porta de comunicação seja reconhecida. 
 
-![Seleção do modelo](./img/ArduinoMarkdown3.jpeg)
-
-![Seleção do modelo](./img/ArduinoMarkdown4.jpg)
+Para isso verifique o chip próximo à porta USB da sua placa. Procure por nomes como "CH340G" ou "FT232RL". 
+Em seguida, baixe e instale o driver correspondente para o seu sistema operacional. As 
+duas imagens a seguir ilustram este procedimento.
 
 
-Para o desenvolvimento de quaisquer códigos dentro do arduino bibliotecas serão de suma importância, 
-para importá-las e conseguir trabalhar de maneira mais fácil é necessário:
+|                  Ferramenta Board Manager                  |          Instalação de drivers           |
+|:----------------------------------------------------------:|:----------------------------------------:|
+| ![Acesso ao Board Manager](./img/ArduinoBoardManager.jpeg) | ![Board Manager](./img/BoardManager.jpg) |
 
-![Seleção do modelo](./img/ArduinoMarkdown5.jpg)
+## Exemplos de Aplicação
 
-#Desenvolvimento do projeto 
 Existem diversos tipos de placas Arduino no mercado, e cada uma 
 apresenta diferenças em suas portas de entrada e saída, aqui temos alguns códigos com comandos
 simples e genéricos que poderâo auxiliar no entendimento da placa.
 
-**Acendendo um led com botão.**
+### Geração de Sinais - Acendendo um led com botão.
 ```c
 const int pinoBotao = 2; 
 const int pinoLed = 13;
@@ -72,7 +72,7 @@ void loop() {
   }
 }
 ```
-**Lendo o valor de um potênciometro.**
+### Aquisição de Sinais - Lendo o valor de um potênciometro.
 ```c
 const int pinoPotenciometro = A0;
 int valorLido = 0;       
@@ -90,31 +90,17 @@ void loop() {
   delay(500);
 }
 ```
-Para definir quais entradas tem o arduino o qual você está trabalhando abra o 
-datasheet específico do mesmo.
-
-#Simulação
-
-Ao trabalharmos com circuitos elétricos/eletrônicos uma etapa crucial é a simulação, já que com ela é possível
-ter uma estimativa dos valores de saída desejados e por consequência conseguiremos adaptar os equipamentos
-para que eles funcionem sem nenhum risco de acidente.
 
 
-![TinkerCAD](./img/TinkerCAD.jpeg)
 
-Dentre os diversos ambientes de simulação este guia abordará o básico sobre o [TinkerCAD](https://www.tinkercad.com).
+## Ambientes de Simulação
+
+No nosso laboratório de pesquisa, há várias unidades de Arduino disponíveis para uso em 
+atividades de pesquisa. Entretanto, caso você se sinta inseguro, há diversas ferramentas que permitem
+a simulação, antes de ir para a parte prática. Dentre os diversos ambientes de simulação o [TinkerCAD](https://www.tinkercad.com) se mostra
+como uma importante ferramenta nesta áreia. 
+
 Para acessar e utilizar basta acesar o link acima e após isso se cadastrar no site, há uma aba [Aprenda](https://www.tinkercad.com/learn/circuits?collectionId=O0K87SQL1W5N4P2) com diversos 
 tutoriais nos mostrando como simular os circuitos mais básicos e as funcionalidades do site. 
-
-
-
-#
-
-
-
-
-
-
-
 
 
