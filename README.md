@@ -1,7 +1,9 @@
-<figure style="text-align: center;">
+<p align="center">
   <img src="docs/img/logo.png" alt="" width="70%" height="70%">
-  <figcaption>Grupo de Controle e Modelagem</figcaption>
-</figure>
+  <br>
+  <strong>Grupo de Controle e Modelagem</strong>
+</p>
+
 
 
 # Guia de Uso - NIDAQ e Arduino
