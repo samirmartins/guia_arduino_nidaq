@@ -2,6 +2,8 @@
 
 Um manual rápido para trabalho com placas Arduino, além de instalação e configurações do Arduino IDE.
 
+---
+
 ## Instalação do Arduino IDE 
 
 Arduino IDE (Ambiente de Desenvolvimento Integrado - IDE) é um software onde é possível desenvolver e 
@@ -10,6 +12,7 @@ onde o mesmo funcionará de forma independente, mesmo se desconectado do computa
 Para o download da IDE que permite a programação de placas Arduino acesse [aqui.](<https://www.arduino.cc/en/software/>) 
 A instalação segue os moldes padrões de qualquer instalador convencional.
 
+---
 
 ## Configurações
 
@@ -30,6 +33,8 @@ sendo utilizada pelo seu Arduino no Gerenciador de Tarefas do Windows.
 
 ![Seleção de porta serial](./img/ArduinoSerial.jpg)
 
+---
+
 ## Instalação de Drivers
 
 Embora a instalação do Arduino IDE em sistemas operacionais modernos inclua os drivers 
@@ -44,6 +49,8 @@ duas imagens a seguir ilustram este procedimento.
 |                  Ferramenta Board Manager                  |          Instalação de drivers           |
 |:----------------------------------------------------------:|:----------------------------------------:|
 | ![Acesso ao Board Manager](./img/ArduinoBoardManager.jpeg) | ![Board Manager](./img/BoardManager.jpg) |
+
+---
 
 ## Exemplos de Aplicação
 
@@ -91,7 +98,7 @@ void loop() {
 }
 ```
 
-
+---
 
 ## Ambientes de Simulação
 
@@ -103,4 +110,5 @@ como uma importante ferramenta nesta áreia.
 Para acessar e utilizar basta acesar o link acima e após isso se cadastrar no site, há uma aba [Aprenda](https://www.tinkercad.com/learn/circuits?collectionId=O0K87SQL1W5N4P2) com diversos 
 tutoriais nos mostrando como simular os circuitos mais básicos e as funcionalidades do site. 
 
+---
 

@@ -29,6 +29,8 @@ Recomendamos a primeira opção como o padrão.
 **IMPORTANTE:** esta é uma versão muito resumida para uso rápido. Maiores detalhes podem ser encontrados (em inglês) em 
 [https://pypi.org/project/nidaqmx/](https://pypi.org/project/nidaqmx/)
 
+---
+
 ## Tarefas (Task)
 
 Uma tarefa é um conjunto de canais virtuais com temporização e outras propriedades. Resumidamente, 
@@ -42,6 +44,8 @@ import nidaqmx # Importa a biblioteca
 with nidaqmx.Task() as task: # Cria a tarefa 
     pass # Aqui você deve digitar o código que deverá ser executado naquela tarefa.
 ```
+
+---
 
 ## Canais Virtuais
 
@@ -80,6 +84,8 @@ AIChannel(name=Dev1/ai0)
 AIChannel(name=Dev1/ai1)
 [1.12345897042644564, -2.1234589701454564]
 ```
+
+---
 
 ## Temporização da Sessão e Período de Amostragem
 
@@ -139,6 +145,8 @@ AIChannel(name=Dev1/ai0)
 Acquired data: [-0.149693, 2.869503, 4.520249, 4.704886, 2.875912, -0.006104, -2.895596, -4.493698, -4.515671, -2.776574]
 ```
 
+---
+
 ## Envio de dados - Analog Output
 
 Podemos usar canais de saída para gerar sinais de tensão pela placa de aquisição de 
@@ -163,3 +171,5 @@ with nidaqmx.Task() as task:
     task.wait_until_done()
     task.stop()
 ```
+
+---
