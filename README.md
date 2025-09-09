@@ -1,19 +1,20 @@
-<p align="center">
-  <img src="docs/img/logo.png" alt= “” class=“center” width="70%" height="70%">
-<figcaption style="text-align: center;">Grupo de Controle e Modelagem</figcaption>
-</p>
+<figure style="text-align: center;">
+  <img src="docs/img/logo.png" alt="" width="70%" height="70%">
+  <figcaption>Grupo de Controle e Modelagem</figcaption>
+</figure>
 
 
 # Guia de Uso - NIDAQ e Arduino
 
 Este é o reposiitório de um guia rápido para **trabalho com placas de aquisição de dados NIDAQ** e **Arduino**. O propóosito 
-deste conteúdo é auxiliar novos membros do [GCOM - Grupo de Controle e Modelagem](https://www.ufsj.edu.br/gcom), assim como qualquer interessado que precise utilizar **NIDAQ (National Instruments Data Acquisition)** ou **Arduino** em projetos de ensino, pesquisa e experimentação.
+deste conteúdo é auxiliar novos membros do [GCOM - Grupo de Controle e Modelagem](https://www.ufsj.edu.br/gcom), 
+assim como qualquer interessado que precise utilizar **NIDAQ (National Instruments Data Acquisition)** ou **Arduino** em projetos de ensino, pesquisa e experimentação.
 
-**IMPORTANTE:** [Neste site](https://samirmartins.github.io/guia_arduino_nidaq/nidaq/) você encontrará instruções simples, exemplos comentados e links de referência para que consiga configurar seu ambiente e iniciar testes rapidamente.
+**IMPORTANTE:** [Neste site](https://samirmartins.github.io/guia_arduino_nidaq/) você encontrará instruções simples, exemplos comentados e links de referência para que consiga configurar seu ambiente e iniciar testes rapidamente.
 
 ---
 
-## [Conteúdo da página (CLIQUE AQUI)](https://samirmartins.github.io/guia_arduino_nidaq/nidaq/)
+## [Conteúdo da página (CLIQUE AQUI)](https://samirmartins.github.io/guia_arduino_nidaq/)
 
 ### [Placas NIDAQ + Python](https://samirmartins.github.io/guia_arduino_nidaq/nidaq/)
 - Instalação de bibliotecas e drivers  
