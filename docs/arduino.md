@@ -60,43 +60,71 @@ simples e genéricos que poderâo auxiliar no entendimento da placa.
 
 ### Geração de Sinais - Acendendo um led com botão.
 ```c
-const int pinoBotao = 2; 
-const int pinoLed = 13;
+int led = 13; //constante led refere-se ao pino digital 8.
+int botao = 11; //constante botao refere-se ao pino digital 2.
 
-int estadoBotao = 0; 
+//Variável que conterá os estados do botão (0 LOW, 1 HIGH).
+int estadoBotao = 0;
+
 void setup() {
-  pinMode(pinoLed, OUTPUT);
-  pinMode(pinoBotao, INPUT);
+  pinMode(led,OUTPUT); //Definindo pino digital 8 como de saída.
+  pinMode(botao,INPUT); //Definindo pino digital 2 como de entrada.
 }
 
 void loop() {
-  estadoBotao = digitalRead(pinoBotao);
+  estadoBotao = digitalRead(botao);
 
   if (estadoBotao == HIGH) {
-    digitalWrite(pinoLed, HIGH);
+    digitalWrite(led,HIGH); //Botão pressionado, acende o led.
   } else {
-    digitalWrite(pinoLed, LOW);
+    digitalWrite(led,LOW); //Botão não pressionado, apaga o led.
   }
 }
 ```
-### Aquisição de Sinais - Lendo o valor de um potênciometro.
+
+|                         Acionamento do Led                         |
+|:------------------------------------------------------------------:|
+| ![Circuito de acionamento do Led](./img/Esquemático Led-Botão.jpg) |
+
+
+### Aquisição de Sinais - Lendo o valor de um potenciômetro.
 ```c
-const int pinoPotenciometro = A0;
-int valorLido = 0;       
+// Declara uma constante inteira chamada "potenciometro" e a associa ao pino analógico A0.
+// No Arduino, usar o número 0 em funções analógicas é um atalho para o pino A0.
+const int potenciometro = 0;
+
+// Cria uma variável chamada "valor" para armazenar o número lido do potenciômetro.
+// Inicializa uma ela com o valor 0.
+int valor = 0;
+
 
 void setup() {
+  // Inicia a comunicação serial com o computador a uma velocidade de 9600 bits por segundo.
+  // Isso é essencial para que o Arduino possa enviar dados para o Monitor Serial.
   Serial.begin(9600);
 }
 
 void loop() {
-  valorLido = analogRead(pinoPotenciometro);
+  // Lê a tensão no pino analógico definido pela variável "potenciometro" (A0).
+  // A função converte a tensão lida (de 0V a 5V) em um valor numérico entre 0 e 1023.
+  // O resultado dessa leitura é armazenado na variável "valor".
+  valor = analogRead(potenciometro);
 
-  Serial.print("Valor lido do potenciômetro: ");
-  Serial.println(valorLido);
+  // Envia o conteúdo atual da variável "valor" para o Monitor Serial do computador.
+  // O "ln" (line new) faz com que, após imprimir o valor, o cursor pule para a próxima linha.
+  Serial.println(valor);
 
-  delay(500);
+  // Pausa a execução do programa por 100 milissegundos (ou 0.1 segundos).
+  // Isso evita que os dados sejam enviados rápido demais, facilitando a leitura no monitor.
+  delay(100);
 }
 ```
+
+|                       Leitura do Potenciômetro                       |
+|:--------------------------------------------------------------------:|
+| ![Circuito com o Potenciômetro](./img/Esquemático Potenciômetro.jpg) | 
+
+
 
 ---
 
