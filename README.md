@@ -8,9 +8,9 @@
 
 # Guia de Uso - NIDAQ e Arduino
 
-Este é o reposiitório de um guia rápido para **trabalho com placas de aquisição de dados NIDAQ** e **Arduino**. O propóosito 
+Este é o reposiitório de um guia rápido para **trabalho com placas de aquisição de dados USB NIDAQ** ou **Arduino** (National Instruments Data Acquisition). O propóosito 
 deste conteúdo é auxiliar novos membros do [GCOM - Grupo de Controle e Modelagem](https://www.ufsj.edu.br/gcom), 
-assim como qualquer interessado que precise utilizar **NIDAQ (National Instruments Data Acquisition)** ou **Arduino** em projetos de ensino, pesquisa e experimentação.
+assim como qualquer interessado que precise utilizar estas placas em projetos de ensino, pesquisa ou extensão envolvendo aquisição de dados.
 
 **IMPORTANTE:** [Neste site](https://samirmartins.github.io/guia_arduino_nidaq/) você encontrará instruções simples, exemplos comentados e links de referência para que consiga configurar seu ambiente e iniciar testes rapidamente.
 

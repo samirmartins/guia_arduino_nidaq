@@ -10,7 +10,7 @@ copyright: Copyright &copy; 2025 - Grupo de Controle e Modelagem (GCoM)
 nav:
   - Início: index.md
   - Arduino: arduino.md
-  - NIDAQ: nidaq.md
+  - NIDAQ+Python: nidaq.md
   
 theme:
   favicon: img/favicon.ico

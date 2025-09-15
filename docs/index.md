@@ -6,8 +6,9 @@
 
 # Guia de Uso - NIDAQ e Arduino
 
-Este é um guia rápido para **trabalho com placas de aquisição de dados NIDAQ** e **Arduino**. O propóosito 
-deste conteúdo é auxiliar novos membros do [GCOM - Grupo de Controle e Modelagem](https://www.ufsj.edu.br/gcom), assim como qualquer interessado que precise utilizar **NIDAQ (National Instruments Data Acquisition)** ou **Arduino** em projetos de ensino, pesquisa e experimentação.
+Este é um guia rápido para **trabalho com placas de aquisição de dados NIDAQ-USB (National Instruments Data Acquisition)** ou **Arduino**. O propóosito 
+deste conteúdo é auxiliar novos membros do [GCOM - Grupo de Controle e Modelagem](https://www.ufsj.edu.br/gcom), assim como qualquer interessado que precise utilizar 
+estas placas em projetos de ensino, pesquisa ou extensão envolvido aquisição de sinais.
 
 Aqui você encontrará instruções simples, exemplos comentados e links de referência para que consiga configurar seu ambiente e iniciar testes rapidamente.
 
@@ -15,13 +16,13 @@ Aqui você encontrará instruções simples, exemplos comentados e links de refe
 
 ## Conteúdo
 
-### [Placas NIDAQ + Python](./nidaq.md)
+### [NIDAQ USB + Python](./nidaq.md)
 - Instalação de bibliotecas e drivers  
 - Criação de tarefas e canais virtuais  
-- Aquisição de sinais analógicos e digitais  
+- Aquisição de sinais (Analog Input)  
 - Temporização e modos de amostragem (software e hardware)  
 - Diferença entre **DIFF, RSE e NRSE**  
-- Envio de sinais (Analog Output) com exemplos práticos  
+- Envio de sinais (Analog Output)  
 
 ### [Arduino](./arduino.md)
 - Instalação e configuração do Arduino IDE  
@@ -36,7 +37,7 @@ Aqui você encontrará instruções simples, exemplos comentados e links de refe
 
 ## Objetivo
 
-O propósito deste site é **desmistificar o uso das ferramentas de hardware** em conjunto com programação. Acreditamos que tanto a integração com placas de aquisição profissionais (NIDAQ) quanto a versatilidade do Arduino formam uma base sólida para prototipagem rápida, ensino e desenvolvimento em Engenharia Elétrica e áreas correlatas.
+O propósito deste site é **desmistificar o uso das ferramentas de hardware** em conjunto com programação. Acreditamos que tanto a integração com placas de aquisição profissionais (NIDAQ-USB) quanto a versatilidade do Arduino formam uma base sólida para prototipagem rápida, ensino e desenvolvimento em Engenharia Elétrica e áreas correlatas.
 
 ---
 
