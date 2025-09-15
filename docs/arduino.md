@@ -84,7 +84,7 @@ void loop() {
 
 |                         Acionamento do Led                         |
 |:------------------------------------------------------------------:|
-| ![Circuito de acionamento do Led](./img/Esquemático Led-Botão.jpg) |
+| ![Circuito de acionamento do Led](img/Esquematico_Led_Botao.jpg) |
 
 
 ### Aquisição de Sinais - Lendo o valor de um potenciômetro.
@@ -122,7 +122,7 @@ void loop() {
 
 |                       Leitura do Potenciômetro                       |
 |:--------------------------------------------------------------------:|
-| ![Circuito com o Potenciômetro](./img/Esquemático Potenciômetro.jpg) | 
+| ![Circuito com o Potenciômetro](img/Esquematico_Potenciometro.jpg) | 
 
 
 
